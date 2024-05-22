@@ -1,4 +1,4 @@
-import { Container, HStack, Text } from "@chakra-ui/react";
+import { Container, HStack} from "@chakra-ui/react";
 
 const skillSection = () => {
     return(
