@@ -1,8 +1,7 @@
 import {
   HStack,
   Container,
-  Button,
-  SkipNavLink,
+  Button
 } from "@chakra-ui/react";
 
 const Navbar = () => {
@@ -17,7 +16,6 @@ const Navbar = () => {
         borderRadius='lg'
         >
         <HStack spacing="3rem" justify={"center"}>
-          <SkipNavLink href="#about"><Button variant='ghost'>About</Button></SkipNavLink>
             <Button variant='ghost'>Skills</Button>
             <Button variant='ghost'>Projects</Button>
             <Button variant='ghost'>Contact</Button>
