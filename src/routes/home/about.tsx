@@ -12,12 +12,16 @@ import {
 const About = () => {
   return (
     <Container mt={"400"} minW={"70%"} maxH={"100%"} position={"relative"}>
-    <SkipNavContent id="about"/>
-      <HStack spacing="10rem">
-        <VStack spacing={6}>
-          <Heading size={"xl"} borderBottom="3px solid #000f84">ABOUT</Heading>
+      <SkipNavContent id="about" />
+      <VStack spacing={2}>
+        <Heading alignSelf={"baseline"} size={"xl"} borderBottom="3px solid #000f84">
+          ABOUT
+        </Heading>
+      </VStack>
+      <HStack>
+        <VStack pr={"3rem"}>
           <Box border="2px solid #000f84" borderRadius="sm">
-          <Image src="https://bit.ly/dan-abramov" h="250px" w="400px"/>
+            <Image src="https://bit.ly/dan-abramov" h="250px" w="200px" />
           </Box>
         </VStack>
         <VStack align={"left"} spacing={"2rem"}>
