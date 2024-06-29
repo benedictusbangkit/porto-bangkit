@@ -8,38 +8,35 @@ import {
   CardBody,
   CardFooter,
   Container,
+  HStack,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { SkillListProps } from "../service/skillInterFace";
+const ImageURL = import.meta.env.VITE_IMAGE_URL;
 
-export interface skills {
-  id: number;
-  techLogo: any;
-  techName: string;
-  level: string;
-}
-
-const SkillCard :React.FC<skills> = ({ id, techLogo, techName, level}) =>{
+const SkillCard: React.FC<SkillListProps> = ({ skill }) => {
   return (
-    <Link to={`skills/${id}`}>
-      <Container>
-        <Card boxSize={"250px"} bgColor={"#48a8ff"}>
-          <CardBody>
-            <VStack>
-              <Image src={techLogo} />
-              <Text textAlign="center" fontWeight="bold">
-                {techName}
-              </Text>
-            </VStack>
-          </CardBody>
-          <Divider />
-          <CardFooter justify="center">
-            <Flex>
-              <Text bg={"tomato"}>{level}</Text>
-            </Flex>
-          </CardFooter>
-        </Card>
-      </Container>
-    </Link>
+    <Container>
+      <HStack>
+        {skill.map((skill) => (
+          <Card boxSize={"250px"} bgColor={"#48a8ff"} key={skill.id}>
+            <CardBody>
+              <VStack>
+                <Image src={ImageURL + skill.attributes.techLogo} />
+                <Text textAlign="center" fontWeight="bold">
+                  {skill.attributes.techName}
+                </Text>
+              </VStack>
+            </CardBody>
+            <Divider />
+            <CardFooter justify="center">
+              <Flex>
+                <Text bg={"tomato"}>{skill.attributes.level}</Text>
+              </Flex>
+            </CardFooter>
+          </Card>
+        ))}
+      </HStack>
+    </Container>
   );
 };
 
