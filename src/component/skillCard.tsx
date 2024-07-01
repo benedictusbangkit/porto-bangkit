@@ -1,42 +1,46 @@
 import {
   Card,
   VStack,
-  Flex,
   Image,
   Text,
-  Divider,
   CardBody,
-  CardFooter,
-  Container,
-  HStack,
+  Box,
+  Grid,
 } from "@chakra-ui/react";
 import { SkillListProps } from "../service/skillInterFace";
 const ImageURL = import.meta.env.VITE_IMAGE_URL;
 
 const SkillCard: React.FC<SkillListProps> = ({ skill }) => {
   return (
-    <Container>
-      <HStack>
-        {skill.map((skill) => (
-          <Card boxSize={"250px"} bgColor={"#48a8ff"} key={skill.id}>
-            <CardBody>
-              <VStack>
-                <Image src={ImageURL + skill.attributes.techLogo} />
-                <Text textAlign="center" fontWeight="bold">
+    <Grid templateColumns="repeat(4, 1fr)" gap={3}>
+      {skill.map((skill) => (
+        <Card
+          height={200}
+          minW={300}
+          bgColor={"#303030"}
+          boxShadow="2xl"
+          key={skill.id}
+        >
+          <CardBody>
+            <VStack>
+              <Box>
+                <Image
+                  justifyContent={"center"}
+                  src={ImageURL + skill.attributes.techLogo}
+                  height={115}
+                />
+                <Text fontWeight="bold" color={"white"} align={"center"}>
                   {skill.attributes.techName}
                 </Text>
-              </VStack>
-            </CardBody>
-            <Divider />
-            <CardFooter justify="center">
-              <Flex>
-                <Text bg={"tomato"}>{skill.attributes.level}</Text>
-              </Flex>
-            </CardFooter>
-          </Card>
-        ))}
-      </HStack>
-    </Container>
+              </Box>
+            </VStack>
+            <Text align={"center"} color={"white"} alignItems={"center"} bg={"#007ef0"}>
+              {skill.attributes.level}
+            </Text>
+          </CardBody>
+        </Card>
+      ))}
+    </Grid>
   );
 };
 

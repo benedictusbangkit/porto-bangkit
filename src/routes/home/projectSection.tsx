@@ -3,19 +3,17 @@ import ProjectCard from "../../component/projectCard";
 
 const projectSection = () => {
   return (
-    <Container border='1px' borderColor='black' mt={"400"} minW={"70%"} maxH={"100%"} position={"relative"}>
-      <VStack spacing={2}>
+    <Container mt={"400"} minW={"70%"} maxH={"100%"} position={"relative"}>
+      <VStack spacing={"1rem"}>
         <Heading
-          alignSelf={"baseline"}
+          alignSelf={"start"}
           size={"xl"}
-          borderBottom="3px solid #000f84"
+          borderBottom="3px solid #007ef0"
+          color={"white"}
         >
           PROJECT
         </Heading>
-        <HStack>
           <ProjectCard />
-          <ProjectCard />
-        </HStack>
       </VStack>
     </Container>
   );

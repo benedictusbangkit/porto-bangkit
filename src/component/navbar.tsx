@@ -16,9 +16,9 @@ const Navbar = () => {
         borderRadius='lg'
         >
         <HStack spacing="3rem" justify={"center"}>
-            <Button variant='ghost'>Skills</Button>
-            <Button variant='ghost'>Projects</Button>
-            <Button variant='ghost'>Contact</Button>
+            <Button color={"white"} variant='ghost'>Skills</Button>
+            <Button color={"white"} variant='ghost'>Projects</Button>
+            <Button color={"white"} variant='ghost'>Contact</Button>
           </HStack>
       </Container>
   );

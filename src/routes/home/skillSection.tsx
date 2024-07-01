@@ -1,4 +1,4 @@
-import { Container, HStack, VStack, Heading, Flex } from "@chakra-ui/react";
+import { Container, Grid, VStack, Heading } from "@chakra-ui/react";
 import SkillsAPI from "../../service/skillsAPI";
 
 const skillSection = () => {
@@ -8,20 +8,18 @@ const skillSection = () => {
       minW={"70%"}
       maxH={"100%"}
       position={"relative"}
-      border="solid, black, 1px"
     >
-      <HStack justify={"center"}>
-        <VStack>
-          <Heading
-            alignSelf={"baseline"}
-            size={"xl"}
-            borderBottom="3px solid #000f84"
-          >
-            SKILLS
-          </Heading>
-          <SkillsAPI />
-        </VStack>
-      </HStack>
+      <VStack spacing={"1rem"}>
+        <Heading
+          alignSelf={"start"}
+          size={"xl"}
+          borderBottom="3px solid #007ef0"
+          color={"white"}
+        >
+          SKILLS
+        </Heading>
+        <SkillsAPI />
+      </VStack>
     </Container>
   );
 };

@@ -21,6 +21,7 @@ const SkillsAPI= () => {
           },
         }));
         setData(fetchedData)
+        setLoading(false)
       } catch (error) {
         console.error(error)
       }

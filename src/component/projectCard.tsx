@@ -5,19 +5,16 @@ import {
   Image,
   Text,
   Heading,
-  Container,
+  Grid,
   Button,
   VStack,
   Divider,
-  Flex,
-  Spacer,
 } from "@chakra-ui/react";
 
 const ProjectCard = () => {
   return (
-    <Container>
-      <Flex>
-        <Card backgroundColor={"gray"} boxSize={"500px"}>
+    <Grid templateColumns="repeat(2, 1fr)" gap={10}>
+        <Card backgroundColor={"gray"} minW={"100%"}>
           <Image
             src="https://support.content.office.net/en-us/media/ec62299b-07e7-4491-b777-77f1cbe477ec.png"
             minH={"60%"}
@@ -29,7 +26,7 @@ const ProjectCard = () => {
               <Heading>Name Project</Heading>
               <Text>Description Project</Text>
             </VStack>
-          </CardBody>
+            boxShadow='lg'  </CardBody>
           <CardFooter h={"100%"}>
             <Button
               width="100%"
@@ -41,9 +38,7 @@ const ProjectCard = () => {
             </Button>
           </CardFooter>
         </Card>
-        <Spacer />
-      </Flex>
-    </Container>
+    </Grid>
   );
 };
 
