@@ -5,7 +5,6 @@ import {Skill} from '../service/skillInterFace';
 
 const SkillsAPI= () => {
   const [data, setData] = useState<Skill[]>([]);
-  const [loading, setLoading] = useState(true);
   const SkillURL = import.meta.env.VITE_BASE_URL
 
   useEffect(() => {
@@ -21,7 +20,6 @@ const SkillsAPI= () => {
           },
         }));
         setData(fetchedData)
-        setLoading(false)
       } catch (error) {
         console.error(error)
       }

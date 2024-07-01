@@ -1,4 +1,4 @@
-import { Container, Grid, VStack, Heading } from "@chakra-ui/react";
+import { Container,VStack, Heading } from "@chakra-ui/react";
 import SkillsAPI from "../../service/skillsAPI";
 
 const skillSection = () => {

@@ -1,4 +1,4 @@
-import { Container, HStack, Heading, VStack } from "@chakra-ui/react";
+import { Container, Heading, VStack } from "@chakra-ui/react";
 import ProjectCard from "../../component/projectCard";
 
 const projectSection = () => {
