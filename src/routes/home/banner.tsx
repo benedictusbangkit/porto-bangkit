@@ -40,7 +40,7 @@ const Banner: React.FC<PhotoListProps> = ({ photo }) => {
                 </Box>
                 <HStack mt={"4"} spacing={8} flex={1}>
                   <a
-                    href={photo.attributes.file}
+                    href={ImageURL + photo.attributes.file}
                     download={"Benedictus Bangkit Kusuma Adi-resume.pdf"}
                     target="_blank"
                   >
