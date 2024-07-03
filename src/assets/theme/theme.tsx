@@ -4,7 +4,7 @@ const theme = extendTheme({
   styles: {
     global: {
       "body.chakra-ui-light": {
-        bg: "#1c1a1b",
+        bg: "#2c2a2a",
       },
     },
   },

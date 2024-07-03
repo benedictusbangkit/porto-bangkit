@@ -1,7 +1,7 @@
 import { useEffect, useState} from 'react';
 import axios from 'axios';
 import SkillCard from '../component/skillCard';
-import {Skill} from '../service/skillInterFace';
+import {Skill} from '../constant/skillInterFace';
 
 const SkillsAPI= () => {
   const [data, setData] = useState<Skill[]>([]);
@@ -24,13 +24,12 @@ const SkillsAPI= () => {
         console.error(error)
       }
     };
-
     SkillData();
   }, []);
 
   return (
     <>
-      <SkillCard skill={data}/>,
+      <SkillCard skill={data}/>
     </>
   );
 };

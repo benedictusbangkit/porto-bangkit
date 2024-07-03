@@ -1,19 +1,29 @@
 import { Container, Heading, VStack } from "@chakra-ui/react";
-import ProjectCard from "../../component/projectCard";
+import ProjectAPI from "../../service/projectAPI";
 
 const projectSection = () => {
   return (
     <Container mt={"400"} minW={"70%"} maxH={"100%"} position={"relative"}>
       <VStack spacing={"1rem"}>
         <Heading
+          size={"l"}
+          display={"inline"}
+          position={"relative"}
           alignSelf={"start"}
-          size={"xl"}
-          borderBottom="3px solid #007ef0"
           color={"white"}
+          _before={{
+            content: '""',
+            backgroundColor: "#007ef0",
+            width: "50%",
+            top: "50%",
+            height: "50%",
+            opacity: "0.45",
+            position: "absolute",
+          }}
         >
-          PROJECT
+          Project
         </Heading>
-          <ProjectCard />
+        <ProjectAPI />
       </VStack>
     </Container>
   );

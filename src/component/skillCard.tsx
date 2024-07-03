@@ -7,7 +7,7 @@ import {
   Box,
   Grid,
 } from "@chakra-ui/react";
-import { SkillListProps } from "../service/skillInterFace";
+import { SkillListProps } from "../constant/skillInterFace";
 const ImageURL = import.meta.env.VITE_IMAGE_URL;
 
 const SkillCard: React.FC<SkillListProps> = ({ skill }) => {
@@ -17,7 +17,7 @@ const SkillCard: React.FC<SkillListProps> = ({ skill }) => {
         <Card
           height={200}
           minW={300}
-          bgColor={"#303030"}
+          bgColor={"#6c6c6c"}
           boxShadow="2xl"
           key={skill.id}
         >

@@ -11,12 +11,21 @@ const skillSection = () => {
     >
       <VStack spacing={"1rem"}>
         <Heading
+          display={"inline"}
+          position={"relative"}
           alignSelf={"start"}
-          size={"xl"}
-          borderBottom="3px solid #007ef0"
           color={"white"}
+          _before={{
+            content: '""',
+            backgroundColor: "#007ef0",
+            width: "50%",
+            top: "50%",
+            height: "50%",
+            opacity: "0.45",
+            position: "absolute",
+          }}
         >
-          SKILLS
+          Skills
         </Heading>
         <SkillsAPI />
       </VStack>
