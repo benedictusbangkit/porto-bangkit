@@ -28,7 +28,7 @@ const ProjectCard: React.FC<ProjectListProps> = ({ project }) => {
           <CardBody>
             <Divider />
             <VStack align={"left"}>
-              <Heading color={"white"}>
+              <Heading color={"white"} size={"xl"}>
                 {project.attributes.project_name}
               </Heading>
               <Text color={"white"}>{project.attributes.project_desc}</Text>

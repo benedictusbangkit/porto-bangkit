@@ -6,7 +6,6 @@ const projectSection = () => {
     <Container mt={"400"} minW={"70%"} maxH={"100%"} position={"relative"}>
       <VStack spacing={"1rem"}>
         <Heading
-          size={"l"}
           display={"inline"}
           position={"relative"}
           alignSelf={"start"}
